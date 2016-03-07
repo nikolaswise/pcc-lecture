@@ -1,0 +1,14 @@
+{
+  "name": "css-talk",
+  "version": "1.0.0",
+  "description": "CSS can quickly become an unmanageable nightmare of important rules and overly-specific selectors, don't let it.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "https://github.com/paulcpederson/css-talk.git"
+  ],
+  "author": "Paul C Pederson <paul.c.pederson@gmail.com> (http://paulcpederson.com/)",
+  "license": "ISC"
+}
