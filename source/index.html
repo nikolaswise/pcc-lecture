@@ -401,22 +401,7 @@
       </div>
     </div>
 
-    <script>
-      function getSlide () {
-        return parseInt(location.hash.substring(1, location.hash.length))
-      }
-
-      window.addEventListener('keydown', function (e) {
-        if (e.keyCode === 37) {
-          var prev = getSlide() - 1
-          location.hash = '#' + prev
-        }
-        if (e.keyCode === 39) {
-          var next = getSlide() + 1
-          location.hash = '#' + next
-        }
-      })
-    </script>
+    <script src="slides.js" async></script>
 
   </body>
 

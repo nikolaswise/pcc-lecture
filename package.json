@@ -14,21 +14,22 @@
     "parallelshell": "^2.0.0",
     "postcss-cli": "^2.5.1",
     "rerun-script": "^0.6.0",
-    "static-site": "^1.1.4"
+    "static-site": "^1.1.4",
+    "surge": "^0.17.7",
+    "uglify-js": "^2.6.2"
   },
   "watches": {
     "img": "source/**/*.{jpg,jpeg,png,svg,gif}",
-    "html": [
-      "source/**/*.{html,md,xml}",
-      "source/_helpers/**"
-    ]
+    "js": "source/*.js",
+    "html": "source/**/*.html"
   },
   "scripts": {
     "sass": "node-sass source/ --output-style compressed --source-map build/ -o build/",
     "postsass": "postcss -u autoprefixer -r build/*.css",
     "img": "imagemin-newer source/ build/",
     "html": "static-site -b build",
-    "prestart": "npm-run-series img sass html",
+    "js": "uglifyjs source/slides.js -o build/slides.js",
+    "prestart": "npm-run-series img sass html js",
     "start": "parallelshell 'live-server build/' 'rerun-script' 'npm run sass -- -w'",
     "predeploy": "npm run prestart",
     "deploy": "surge build/"
