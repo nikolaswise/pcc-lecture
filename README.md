@@ -1,7 +1,6 @@
 # CSS: Rules to Style By
 
-> Presentation for Esri Developer Summit 2016
-> Paul C Pederson
+> Presentation for Esri Developer Summit 2016 – Paul C Pederson
 
 CSS can quickly become an unmanageable nightmare of important rules and overly-specific selectors, don't let it.
 
@@ -61,21 +60,21 @@ to this:
 3. Harder to change
 4. Harder to maintain
 
-![](buggy.gif)
+![](source/buggy.gif)
 
 ## It doesn't have to be terrible!
 
 ## Lots of smart systems:
-- BEM
-- SMACSS
-- OOCSS
+- [BEM](https://en.bem.info/)
+- [SMACSS](https://smacss.com/)
+- [OOCSS](https://www.smashingmagazine.com/2011/12/an-introduction-to-object-oriented-css-oocss/)
 
 ## Preprocessors can help, too!
-- Stylus
-- Sass
-- LESS
-- PostCSS
-- Myth
+- [Stylus](http://stylus-lang.com/)
+- [Sass](http://sass-lang.com/)
+- [LESS](http://lesscss.org/)
+- [PostCSS](http://postcss.org/)
+- [Myth](http://www.myth.io/)
 
 ### But you don't need any of those to have better CSS...
 
