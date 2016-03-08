@@ -32,6 +32,6 @@
     "prestart": "npm-run-series img sass html js",
     "start": "parallelshell 'live-server build/' 'rerun-script' 'npm run sass -- -w'",
     "predeploy": "npm run prestart",
-    "deploy": "surge build/"
+    "deploy": "surge build/ --domain css-rules.surge.sh"
   }
 }
