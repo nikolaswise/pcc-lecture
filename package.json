@@ -2,13 +2,35 @@
   "name": "css-talk",
   "version": "1.0.0",
   "description": "CSS can quickly become an unmanageable nightmare of important rules and overly-specific selectors, don't let it.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "https://github.com/paulcpederson/css-talk.git"
-  ],
   "author": "Paul C Pederson <paul.c.pederson@gmail.com> (http://paulcpederson.com/)",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^6.3.3",
+    "calcite-web": "github:esri/calcite-web#v1.0.0-beta.6",
+    "imagemin-newer": "^1.0.1",
+    "live-server": "^0.9.2",
+    "node-sass": "^3.4.2",
+    "npm-run-series": "^1.0.0",
+    "parallelshell": "^2.0.0",
+    "postcss-cli": "^2.5.1",
+    "rerun-script": "^0.6.0",
+    "static-site": "^1.1.4"
+  },
+  "watches": {
+    "img": "source/**/*.{jpg,jpeg,png,svg,gif}",
+    "html": [
+      "source/**/*.{html,md,xml}",
+      "source/_helpers/**"
+    ]
+  },
+  "scripts": {
+    "sass": "node-sass source/ --output-style compressed --source-map build/ -o build/",
+    "postsass": "postcss -u autoprefixer -r build/*.css",
+    "img": "imagemin-newer source/ build/",
+    "html": "static-site -b build",
+    "prestart": "npm-run-series img sass html",
+    "start": "parallelshell 'live-server build/' 'rerun-script' 'npm run sass -- -w'",
+    "predeploy": "npm run prestart",
+    "deploy": "surge build/"
+  }
 }
