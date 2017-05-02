@@ -1,8 +1,8 @@
 {
   "name": "css-talk",
   "version": "1.0.0",
-  "description": "CSS can quickly become an unmanageable nightmare of important rules and overly-specific selectors, don't let it.",
-  "author": "Paul C Pederson <paul.c.pederson@gmail.com> (http://paulcpederson.com/)",
+  "description": "Desinging Simple Sample Interactive Map Apps",
+  "author": "Nikolas Wise <studio@nikolas.ws> (http://nikolas.ws/)",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^6.3.3",
@@ -32,6 +32,6 @@
     "prestart": "npm-run-series img sass html js",
     "start": "parallelshell 'live-server build/' 'rerun-script' 'npm run sass -- -w'",
     "predeploy": "npm run prestart",
-    "deploy": "surge build/ --domain css-rules.surge.sh"
+    "deploy": "surge build/ --domain designing-maps.nikolas.ws"
   }
 }
