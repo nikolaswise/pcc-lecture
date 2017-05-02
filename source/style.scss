@@ -1,16 +1,5 @@
-@import '../node_modules/calcite-web/dist/sass/calcite-web';
 @import './hljs';
 
-html {
-  font-size: 36px;
-}
-
-body {
-  width: 100%;
-  height: 100%;
-  font-size: 24px;
-  background: url('bg.png') center center no-repeat transparent;
-}
 
 .slide {
   display: none;
@@ -35,8 +24,28 @@ body {
 
 .slide-title:target {
   width: 100vw;
-  background: url('title.png') center center no-repeat transparent;
   background-size: cover;
+}
+
+.text-center {
+  text-align: center;
+}
+
+html {
+  font-size: 36px;
+}
+
+body {
+  background-color: #fff;
+  color: #444;
+  font-family: 'GT Sectra Trial';
+  width: 100%;
+  height: 100%;
+  font-size: 24px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'GT Sectra Display Trial';
 }
 
 code {
